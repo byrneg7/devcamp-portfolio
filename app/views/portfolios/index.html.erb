@@ -3,5 +3,6 @@
     <p> <%= record.title%> </p>
     <p> <%= record.subtitle%> </p>
     <p> <%= record.body%> </p>
-    <p> <%= image_tag(record.thumb_image)%> </p>
+    <p> <%= image_tag(record.thumb_image) unless record.thumb_image.nil? %> </p>
 <% end %>
+
