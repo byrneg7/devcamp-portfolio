@@ -3,6 +3,7 @@
     <p> <%= record.title%> </p>
     <p> <%= record.subtitle%> </p>
     <p> <%= record.body%> </p>
-    <p> <%= image_tag(record.thumb_image) unless record.thumb_image.nil? %> </p>
+    <p> <%= image_tag(record.main_image, {:height => "25%", :width => "25%"}) %> </p>
+    <%= link_to "Edit", edit_portfolio_path(portfolio_item_id) %>
 <% end %>
 

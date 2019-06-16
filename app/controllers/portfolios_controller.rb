@@ -10,7 +10,8 @@ class PortfoliosController < ApplicationController
   end
 
   def create
-    @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :portfolio))
+    puts '****',  params , '****'
+    @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body, :main_image))
 
     respond_to do |format|
       if @portfolio_item.save
@@ -34,6 +35,10 @@ class PortfoliosController < ApplicationController
         format.html { render :edit }
       end
     end
+  end
+
+  def show
+    @portfolio_item = Portfolio.find(params[:id])
   end
 
 end
