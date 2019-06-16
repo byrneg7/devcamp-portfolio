@@ -1,6 +1,4 @@
 {
-    "editor.defaultFormatter": "castwide.solargraph",
     "editor.formatOnSave": true,
-    "ruby.format": "rufo",
     "solargraph.formatting": true
 }
