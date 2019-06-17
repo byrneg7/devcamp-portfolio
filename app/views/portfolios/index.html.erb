@@ -6,7 +6,7 @@
     <p> <%= record.title%> </p>
     <p> <%= record.subtitle%> </p>
     <p> <%= record.body%> </p>
-    <p> <%= link_to record.title, portfolio_show_path(record) %> </p>
+    <p> <%= link_to record.title,portfolio_show_path(record) %> </p>
     <p> <%= image_tag(record.main_image) unless record.main_image.nil? %> </p>
     <%= link_to("Edit", edit_portfolio_path(record.id))%>
     <%= link_to("Delete item", portfolio_path(record), 
